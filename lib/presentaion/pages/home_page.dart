@@ -86,24 +86,28 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     )
-                  ]),
+                  ]
+                  ),
                 ),
             Container(
                   height: 400,
                   width: double.infinity,
                   color: Color.fromARGB(255, 214, 138, 227),
                   child:  GridView(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                mainAxisSpacing: 10,
-                crossAxisSpacing: 10,
-                crossAxisCount: 3,
-              ),
-              children: [
-                for(int i = 0;i < 9;i++)
-                Container(color: Color.fromARGB(255, 230, 202, 235)),
-              ],
-          ),
-                ),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+
+                      mainAxisSpacing: 10,
+                      crossAxisSpacing: 10,
+                      crossAxisCount: 3,
+                    ),
+
+                    children: [
+
+                      for(int i = 0;i < 9;i++)
+                      Container(color: Color.fromARGB(255, 230, 202, 235)),
+                    ],
+                  ),
+            ),
             Container(
               height: 200,
               width: double.infinity,
@@ -111,28 +115,26 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.all(10),
               child: Row(
                 children: [
-                  Container(
-                     child: ElevatedButton.icon(
-                      onPressed:  () {},
-                       icon: Icon(Icons.replay,
-                       size: 30.0,
-                       color: Color.fromARGB(255, 203, 70, 25),
-                       ),
-                        label: Text('Play again'),
-                     ),
-                  ),
                   SizedBox(
-                        width: 50.0,
+                    width: 50.0,
                   ),
-                  Container(
-                    child: ElevatedButton.icon(
-                     onPressed:  () {},
-                     icon: Icon(Icons.start,
-                     size: 30.0,
-                     color: Color.fromARGB(255, 203, 70, 25),
-                     ),
-                     label: Text('Start'),
-                    ),
+                  ElevatedButton.icon(
+                    onPressed:  () {},
+                    icon: Icon(
+                      Icons.replay,
+                      size: 24.0,
+                      color: Colors.purple,
+                      ),
+                      label: Text('Play again'),
+                  ),
+                  ElevatedButton.icon(
+                    onPressed:  () {},
+                    icon: Icon(
+                      Icons.start,
+                      size: 24.0,
+                      color: Colors.purple,
+                      ),
+                      label: Text('Start'),
                   ),
                 ],
               ),
